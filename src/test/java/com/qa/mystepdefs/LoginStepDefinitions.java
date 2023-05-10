@@ -55,7 +55,8 @@ public class LoginStepDefinitions {
 
     @Then("I should be logged in successfully")
     public void i_should_be_logged_in_successfully() {
-       Assert.assertEquals(loginPage.checkLogoutLink(), true);
+        Assert.assertTrue(loginPage.checkLogoutLink(), "True");
+
     }
 
 
@@ -63,7 +64,7 @@ public class LoginStepDefinitions {
     @Then("I should see an error message indicating {string}")
     public void i_should_see_an_error_message_indicating(String errorMessage) {
         // Assert that an error message is displayed on the page matching the expected error message
-        Assert.assertEquals( driver.findElement(By.cssSelector(".alert-danger")).isDisplayed(), true);
+        Assert.assertTrue(driver.findElement(By.cssSelector(".alert-danger")).isDisplayed());
     }
 
     @When("I click on the \"Forgotten Password\" link")

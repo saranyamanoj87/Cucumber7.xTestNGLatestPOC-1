@@ -6,14 +6,14 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     // Locators
-    private By emailInputLocator = By.name("email");
-    private By passwordInputLocator = By.name("password");
-    private By loginButtonLocator = By.xpath("//input[@type='submit']");
-    private By forgottenPasswordLinkLocator = By.linkText("Forgotten Password");
-    private By logoutLinkLocator = By.linkText("Logout");
+    public By emailInputLocator = By.name("email");
+    public By passwordInputLocator = By.name("password");
+    public By loginButtonLocator = By.xpath("//input[@type='submit']");
+    public By forgottenPasswordLinkLocator = By.linkText("Forgotten Password");
+    public By logoutLinkLocator = By.linkText("Logout");
 
 
     // Constructor
@@ -57,7 +57,8 @@ public class LoginPage {
     }
 
     public String getForgotPwdPageUrl(){
-        String forgotPwdPageUrl = driver.getCurrentUrl();
+        String forgotPwdPageUrl;
+        forgotPwdPageUrl = driver.getCurrentUrl();
         return forgotPwdPageUrl;
     }
 
